@@ -17,10 +17,9 @@ const useFetchProjects = () => {
         content_type: 'projects',
       });
       const projects = response.items.map((item) => {
-        const title = item.fields.title;
-        const url = item.fields.url;
-        const id = item.sys.id;
-        const img = item.fields.image?.fields?.file?.url;
+        const { title, url, image } = fields;
+        const id = sys.id;
+        const img = image?.fields?.file?.url;
         return { title, url, id, img };
       });
       setLoading(false);
