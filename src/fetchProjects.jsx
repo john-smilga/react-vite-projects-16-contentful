@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { createClient } from 'contentful';
+console.log(import.meta.env.VITE_API_KEY);
 
 const client = createClient({
   space: 'qz00uzgg3leh',
